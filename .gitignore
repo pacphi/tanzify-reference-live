@@ -24,7 +24,7 @@ crash.log
 # IDE
 .idea
 .eclipse
-.history/
+.history
 
 # Terragrunt
 .terragrunt-cache

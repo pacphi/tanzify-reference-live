@@ -59,10 +59,8 @@ More details on why is detailed in the Terragrunt docs [here](https://terragrunt
 and [here](https://blog.gruntwork.io/5-lessons-learned-from-writing-over-300-000-lines-of-infrastructure-code-36ba7fadeac1)
 
 ### Prerequisites
-
-- Terraform 0.13+
-- Terragrunt 0.24.0+
-- LastPass CLI installed if you are using it as your secret store.
+- [Terraform](https://www.terraform.io/downloads.html) 0.14.7+
+- [Terragrunt](https://terragrunt.gruntwork.io/docs/getting-started/install/#install-terragrunt) 0.28.7+
 
 
 <!-- USAGE EXAMPLES -->
@@ -85,12 +83,8 @@ env.hcl
 ```
 
 * Secrets:
-    - If Using LastPass, install & configure LastPass CLI
-    - Store your secrets (Cloud provider credentials, Opsman password and Pivnet token) in LastPass. Take a look at one of the `terragrunt.hcl` files in the the `0_secrets` directory for an example.
-    - Modify the LastPass item ID in the `.hcl` files under the `0_secrets` directory for the relevant secret. **Hint:** Use `lpass ls | grep itemname ` to find item ID.
-    - `export LASTPASS_PASSWORD="~/.lpass"`  and `export LASTPASS_USER="lastpassuserid"`
     - cd `_scripts`
-    - run `./0_apply_secrets.sh` to make secrets are being fetched correctly.
+    - run `./0_apply_secrets.sh` to make sure secrets are being fetched correctly.
     
 * Pave Network and Storage:
   -  From`_scripts` directory run `1_apply_infra`
@@ -105,13 +99,11 @@ env.hcl
   
   - To Install other tiles, take a look at the `3_harbor-install-configure/terragrunt.hcl` and tile configurations under the terraform module `tanzify-infrastructure/tile-install-configure/configuration`
 
-## Troubeshooting
+## Troubleshooting
 
-1. Running `./0_apply_secrets.sh` throwing errors. 
-  **Possible Fix:** LastPass CLI may have logged you out. Run `lpass login`
-2. Something went wrong with a module and I need to run it again. 
+1. Something went wrong with a module and I need to run it again. 
 **Possible Fix:** Navigate to the directory with the problem and remove the `.terragrunt-cache` directory which will refecth the module and reset your state. 
-  You can run `find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;` to recuresively delete the .terragrunt-cache directories. 
+  You can run `find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;` to recursively delete the `.terragrunt-cache` directories. 
 
 ## Cleanup
 
