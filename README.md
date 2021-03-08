@@ -69,10 +69,10 @@ and [here](https://blog.gruntwork.io/5-lessons-learned-from-writing-over-300-000
 
 * Clone this repo into another directory
 ```
-git clone https://github.com/abhinavrau/tanzify-arau-live.git tanzify-username-live
+git clone https://github.com/pacphi/tanzify-reference-live.git
 ```
 *  This repo has one example each for AWS, Azure and GCP. Keep the directory for the cloud provider you want and remove the others.
-Rename the region and `demo1` directories to suit your needs.
+Rename the region and `demo` directories to suit your needs.
 
 * Modify the following files for the cloud provider/region/AZs you are targeting:
 
