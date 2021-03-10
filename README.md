@@ -84,13 +84,16 @@ env.hcl
 
 * Secrets:
     - cd `_scripts`
+    - Review the contents of each `terragrunt.hcl` file within the `0_secrets/secret-*` sub-directories.  Edit the `inputs` section variable values as necessary.
     - run `./0_apply_secrets.sh` to make sure secrets are being fetched correctly.
-    
+
 * Pave Network and Storage:
   -  From`_scripts` directory run `1_apply_infra`
+
 * Install OpsMan
   - Modify `1_opsman-compute/opsman_vars.hcl` to reflect the version and build of Opsman to use.
   - From`_scripts` directory run `2_apply_opsman` to install OpsMan and BOSH director
+  
 * Install Tiles
   - Modify `1_tkgi-install-configure/tkgi_vars.hcl` to reflect the version of TKGI to install.
   - Modify `2_tas-install-configure/tas4vms_vars.hcl` to reflect the version of TAS to install.
