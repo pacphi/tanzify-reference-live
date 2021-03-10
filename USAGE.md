@@ -37,7 +37,7 @@ Visit the following in your favorite browser
 https://opsmanager.{ENV}.{DOMAIN}
 ```
 
-> Authenticate with username and password credentials where username is `admin` and password is the value you obtained following [these instructions](#getting-th-operations-manager-password).
+> Authenticate with username and password credentials where username is `admin` and password is the value you obtained following [these instructions](#getting-the-operations-manager-password).
 
 ### Managing users
 
