@@ -4,20 +4,20 @@ generate "custom-output" {
   contents = <<EOF
 
   output "azure_subscription_id" {
-    value = var.azure_subscription_id
+    value = var.az_subscription_id
     sensitive = true
   }
 
   output "azure_client_id" {
-    value = var.azure_client_id
+    value = var.az_client_id
     sensitive = true
   }
   output "azure_client_secret" {
-    value = var.azure_client_secret
+    value = var.az_client_secret
     sensitive = true
   }
   output "azure_tenant_id" {
-    value = var.azure_tenant_id
+    value = var.az_tenant_id
     sensitive = true
   }
 EOF

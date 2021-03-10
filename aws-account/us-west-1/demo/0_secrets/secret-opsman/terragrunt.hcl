@@ -4,7 +4,7 @@ generate "custom-output" {
   contents = <<EOF
 
   output "opsman_password" {
-    value = data.random_string.opsman_secret.result
+    value = random_string.opsman_secret.result
     sensitive = true
   }
 
