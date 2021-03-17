@@ -5,10 +5,12 @@ generate "custom-output" {
 
   output "access_key" {
     value = var.aws_access_key
+    sensitive = true
   }
 
   output "secret_access_token" {
     value = var.aws_secret_key
+    sensitive = true
   }
 EOF
 }
