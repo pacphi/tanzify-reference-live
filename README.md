@@ -105,7 +105,7 @@ env.hcl
 ## Troubleshooting
 
 1. Something went wrong with a module and I need to run it again. 
-**Possible Fix:** Navigate to the directory with the problem and remove the `.terragrunt-cache` directory which will refecth the module and reset your state. 
+**Possible Fix:** Navigate to the directory with the problem and remove the `.terragrunt-cache` directory which will refetch the module and reset your state. 
   You can run `find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;` to recursively delete the `.terragrunt-cache` directories. 
 
 ## Cleanup

@@ -46,7 +46,7 @@ https://opsmanager.{ENV}.{DOMAIN}
 > See https://docs.pivotal.io/tkgi/1-10/manage-users.html for more details.
 
 ```bash
-uaa-cli uaa-cli target https://{TKGI_API_ENDPOINT}:8443 -k
+uaa-cli target https://{TKGI_API_ENDPOINT}:8443 -k
 uaa-cli get-client-credentials-token admin -s {TKGI_UAA_MANAGEMENT_ADMIN_CLIENT_SECRET}
 uaa-cli create-user tanzu-gitops --email tanzu-gitops@notreal.com --password {PASSWORD}
 uaa-cli add-member pks.clusters.manage tanzu-gitops
